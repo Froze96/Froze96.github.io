@@ -12,7 +12,9 @@
 </head>
 <body>
 	<!--  Шапка--> 
-<div class="header">
+<div class="header__wrapper"> 
+<div class="header__layer"></div>	
+<div class="header"  id="header-id">
 	<!--  Лого --> 
 	<div class="header__logo">
 		<img src="assets/logo.png"  alt="header__logo" class="header__logo-img">				
@@ -32,13 +34,13 @@
 		<nav class="header__nav" id="header__nav-id">
 			<ul class="header__nav__items">
 				<li class="header__nav__item">
-					<a href="" class="header__nav__item-link">Главная</a>
+					<a href="#" class="header__nav__item-link" ><span uk-icon="home"></span> Главная</a>
 				</li>
 				<li class="header__nav__item">
-					<a href="" class="header__nav__item-link">Проекты</a>
+					<a href="projects.html" class="header__nav__item-link"><span uk-icon="bookmark"></span> Проекты</a>
 				</li>
 				<li class="header__nav__item">
-					<a href="" class="header__nav__item-link">Контакты</a>
+					<a href="#" class="header__nav__item-link"><span uk-icon="location"> </span>Контакты</a>
 				</li>										
 			</ul>				
 		</nav>
@@ -47,6 +49,7 @@
 		</div>
 	</div>
 
+</div>
 </div>
 
 <div class="main">
@@ -106,13 +109,75 @@
 		</div>					
 	</div>
 	<!--   Слоган--> 
-	<div class="main__slogan">
-		<h2 class="main__slogan-text">Мы создаем качественный продукт по доступной цене.<br> Наша задача подарить вам комфорт и домашнийи уют.</h2>
+	<div class="uk-overflow-hidden">
+		<div class="main__slogan" uk-scrollspy="cls: uk-animation-kenburns; repeat: true">
+			<h2 class="main__slogan-text">Мы создаем качественный продукт по доступной цене.<br> Наша задача подарить вам комфорт и домашнийи уют.</h2>
+		</div>
 	</div>
 
 
+	<div class="works">
+		<h2>Виды услуг</h2>
+		<div class="uk-child-width-1-1 " uk-grid>	    
+		    <div class="uk-inline uk-light">	    	
+		        <img src="assets/works.jpg" alt="">
+
+		        <button class="uk-position-absolute uk-transform-center" type="button" style="left: 28%; top: 20%"  uk-marker></button>
+				<div uk-drop>
+					<div class="uk-card uk-card-body uk-card-default">
+					 Строительство и ремонт крыш. Полное оборудование (водоотлив, снегозадержатели, каминная труба). 
+					</div>
+				</div>
+
+				 <button class="uk-position-absolute uk-transform-center" type="button" style="left: 22%; top: 41%"  uk-marker></button>
+				<div uk-drop>
+					<div class="uk-card uk-card-body uk-card-default">
+					Полная отделка фасада. Грунтовка, покраска, утепление, отделка декоративными материалами и т.д.
+					</div>
+				</div>
+
+				 <button class="uk-position-absolute uk-transform-center" type="button" style="left: 11%; top: 85%"  uk-marker></button>
+				<div uk-drop>
+					<div class="uk-card uk-card-body uk-card-default">
+					Прокладка всех видов коммуникаций. Водоснабжение, газопровод, канализация, электропитание.
+					</div>
+				</div>
+
+				 <button class="uk-position-absolute uk-transform-center" type="button" style="left: 21%; top: 67%"  uk-marker></button>
+				<div uk-drop>
+					<div class="uk-card uk-card-body uk-card-default">
+					Оборудование фундамента, рестоврация, утепление. Установка отмостки.
+					</div>
+				</div>
+
+				 <button class="uk-position-absolute uk-transform-center" type="button" style="left: 10%; top: 59%"  uk-marker></button>
+				<div uk-drop>
+					<div class="uk-card uk-card-body uk-card-default">
+					Строительство заборов различных типов (дерево, металл, блоки, смешанного типа). Установка ворот.
+					</div>
+				</div>
+
+				<button class="uk-position-absolute uk-transform-center" type="button" style="left: 61%; top: 82%"  uk-marker></button>
+				<div uk-drop>
+					<div class="uk-card uk-card-body uk-card-default">
+					Ландшафтные работы. Включают в себя доставку грунта и его распределение. Оборудование клумб, проклака дорожек, посадка газона.
+					</div>
+				</div>
+
+				<button class="uk-position-absolute uk-transform-center " type="button" style="left: 52%; top: 47%"  uk-marker></button>
+				<div uk-drop>
+					<div class="uk-card uk-card-body uk-card-default">
+					строительство дома под ключ.
+					</div>
+				</div>
+
+		    </div>
+		</div>
+	</div>
+
 
 </div>
+
 
 
 

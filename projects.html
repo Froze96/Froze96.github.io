@@ -2,13 +2,103 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">	
-    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link rel="stylesheet" href="css/index.css">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.20/css/uikit.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 	<title>Document</title>
+
 </head>
 <body>
-	<h1>Projects</h1>
-	<h2>p2</h2>
-	<button onclick="on()">projects</button>
-<script type="text/javascript src="projects.js"></script>	
+	<!--  Шапка--> 
+<div class="header__wrapper"> 
+<div class="header__layer"></div>	
+<div class="header"  id="header-id">
+	<!--  Лого --> 
+	<div class="header__logo">
+		<img src="assets/logo.png"  alt="header__logo" class="header__logo-img">				
+	</div>
+	<!--   котейнер возле лого --> 
+	<div class="header__container">
+		<div class="header__info">
+			<div class="header__info__item">
+				<i class="material-icons">call</i> 8-916-934-23-23
+			</div>
+			<div class="header__info__item header__info-title"> Comfort - service</div>
+			<div class="header__info__item">
+				<i class="material-icons">alternate_email</i>comfort-service@gmail.com
+			</div>
+		</div>
+		<!--   Меню --> 			
+		<nav class="header__nav" id="header__nav-id">
+			<ul class="header__nav__items">
+				<li class="header__nav__item">
+					<a href="index.html" class="header__nav__item-link" ><span uk-icon="home"></span> Главная</a>
+				</li>
+				<li class="header__nav__item">
+					<a href="#" class="header__nav__item-link"><span uk-icon="bookmark"></span> Проекты</a>
+				</li>
+				<li class="header__nav__item">
+					<a href="#" class="header__nav__item-link"><span uk-icon="location"> </span>Контакты</a>
+				</li>										
+			</ul>				
+		</nav>
+		<div  class="header__toggler" id="navToggler">
+			<i class="material-icons material-icons--nav">view_headline</i>
+		</div>
+	</div>
+
+</div>
+</div>
+
+<div class="main">
+	<div class="projects">
+		<h3>Наши проекты</h3>
+		<div class=" projects__container">
+
+		    <div class="projects__item" uk-lightbox="animation: slide">
+		        <a class="uk-inline" href="assets/projects/p11.png" data-caption="Создаем полный комплекс систем водоснабжения">
+		            <img class="projects__item-img" src="assets/projects/p11.png" alt="">	            
+		        </a>
+		        <a href="assets/projects/p12.jpg" data-caption="Подбираем только качественные материалы немецких и итальянских производителей"></a>
+		        <a href="assets/projects/p13.jpg" data-caption="Обеспечиваем отладку ваших систем."></a>
+		        <h2 class="projects__item-title">Водоснабжение</h2>	        
+		    </div>
+
+		    <div class="projects__item" uk-lightbox="animation: slide">
+		        <a class="uk-inline" href="assets/projects/p21.jpg" data-caption="Строим коттеджи с нуля. Заранее обговариваем проект и смету с каждым заказчиком.">
+		            <img class="projects__item-img" src="assets/projects/p21.jpg" alt="">	            
+		        </a>
+		        <a href="assets/projects/p22.jpg" data-caption="В нашу работу входит полный цикл строительства."></a>
+		        <a href="assets/projects/p23.jpg" data-caption="Возможны условия строительства с вашим фунаментом."></a>
+		        <h2 class="projects__item-title">Строительство</h2>	        
+		    </div>
+
+		     <div class="projects__item" uk-lightbox="animation: slide">
+		        <a class="uk-inline" href="assets/projects/p31.jpg" data-caption="Деллаем отделку под ключ. Работаем как с квартирами, так и с домами.">
+		            <img class="projects__item-img" src="assets/projects/p31.jpg" alt="">	            
+		        </a>
+		        <a href="assets/projects/p32.jpg" data-caption="Производим отделку фасаа."></a>
+		        <a href="assets/projects/p33.jpg" data-caption="Создаем интерьер любой сложности."></a>
+		        <h2 class="projects__item-title">Строительство</h2>	        
+		    </div>
+
+		    <div class="projects__item" uk-lightbox="animation: slide">
+		        <a class="uk-inline" href="assets/projects/p41.jpg" data-caption="Занимаемся земельными работами различного типа.">
+		            <img class="projects__item-img" src="assets/projects/p41.jpg" alt="">	            
+		        </a>
+		        <a href="assets/projects/p42.jpg" data-caption="Работаем с ланшафтом. Выравниваем участки, меняем уровень, строим дорожки, сажаем газон."></a>
+		        <a href="assets/projects/p43.jpg" data-caption="Устанавливаем систему канализации."></a>
+		        <h2 class="projects__item-title">Земельные работы</h2>	        
+		    </div>	 
+		</div>
+	</div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.20/js/uikit.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.20/js/uikit-icons.min.js"></script>
+<script type="text/javascript src="js/projects.js"></script>	
 </body>
 </html>

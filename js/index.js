@@ -9,3 +9,18 @@ navToggler.onclick = function navToggle() {
 }
 
  
+
+window.addEventListener('scroll',headerAnimation); 
+
+
+
+function headerAnimation() { 
+	let x = document.getElementById('header-id');
+	  if ( window.pageYOffset > 50  && x.className === "header"){
+	  	x.className += " uk-animation-slide-top-small header--slide"
+	  } else if (window.pageYOffset <= 50){
+	  	x.className = "header";
+	  }
+}
+
+ //header.setAttribute("uk-scrollspy", "cls:uk-animation-slide-top-small") 
