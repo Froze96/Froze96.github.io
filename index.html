@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">	
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link rel="stylesheet" href="css/index.css">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.20/css/uikit.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+	<title>Document</title>
+
+</head>
+<body>
+	<!--  Шапка--> 
+<div class="header">
+	<!--  Лого --> 
+	<div class="header__logo">
+		<img src="assets/logo.png"  alt="header__logo" class="header__logo-img">				
+	</div>
+	<!--   котейнер возле лого --> 
+	<div class="header__container">
+		<div class="header__info">
+			<div class="header__info__item">
+				<i class="material-icons">call</i> 8-916-934-23-23
+			</div>
+			<div class="header__info__item header__info-title"> Comfort - service</div>
+			<div class="header__info__item">
+				<i class="material-icons">alternate_email</i>comfort-service@gmail.com
+			</div>
+		</div>
+		<!--   Меню --> 			
+		<nav class="header__nav" id="header__nav-id">
+			<ul class="header__nav__items">
+				<li class="header__nav__item">
+					<a href="" class="header__nav__item-link">Главная</a>
+				</li>
+				<li class="header__nav__item">
+					<a href="" class="header__nav__item-link">Проекты</a>
+				</li>
+				<li class="header__nav__item">
+					<a href="" class="header__nav__item-link">Контакты</a>
+				</li>										
+			</ul>				
+		</nav>
+		<div  class="header__toggler" id="navToggler">
+			<i class="material-icons material-icons--nav">view_headline</i>
+		</div>
+	</div>
+
+</div>
+
+<div class="main">
+	<!--  Слайдер --> 
+	<div uk-slider="center: true; autoplay: true; pause-on-hover: true;" class="main__slider">
+		<div class="uk-position-relative uk-visible-toggle uk-light">
+		    <ul class="uk-slider-items uk-grid-match uk-grid" uk-height-viewport="offset-top: true; offset-bottom: 5">
+		        <li class="uk-width-1-1">
+		            <div class="uk-cover-container">
+		                <img src="assets/slider/slide1.jpg" alt="" uk-cover>
+		                <div class="uk-position-center uk-panel"><h1 class="main__slider-h1">Строительство домов и коттеджей</h1></div>
+		            </div>
+		        </li>
+		        <li class="uk-width-1-1">
+		            <div class="uk-cover-container">
+		                <img src="assets/slider/slide1.jpg" alt="" uk-cover>
+		                <div class="uk-position-center uk-panel"><h1 class="main__slider-h1">Отделка помещений</h1></div>
+		            </div>
+		        </li>
+		        <li class="uk-width-1-1">
+		            <div class="uk-cover-container">
+		                <img src="assets/slider/slide2.jpg" alt="" uk-cover>
+		                <div class="uk-position-center uk-panel"><h1 class="main__slider-h1">Водоснабжение</h1></div>
+		            </div>
+		        </li>
+		        <li class="uk-width-1-1">
+		            <div class="uk-cover-container">
+		                <img src="assets/slider/slide1.jpg" alt="" uk-cover>
+		                <div class="uk-position-center uk-panel"><h1 class="main__slider-h1">Настройка и установка котельного оборудования</h1></div>
+		            </div>
+		        </li>
+		        <li class="uk-width-1-1">
+		            <div class="uk-cover-container">
+		                <img src="assets/slider/slide1.jpg" alt="" uk-cover>
+		                <div class="uk-position-center uk-panel"><h1 class="main__slider-h1">Консультация по проектам</h1></div>
+		            </div>
+		        </li>
+		    </ul>
+		    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+		    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+		</div>
+		<ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+	</div>
+	<!--   Блок преимущества --> 
+	<div class="main__advantages">
+		<div class="main__advantages__item">		
+			<img class="main__advantages__item-img" src="assets/advantages/agreement.svg" alt="advantage-image">		
+			<div class="main__advantages__item-title">Надежность</div>			
+		</div>
+		<div class="main__advantages__item">		
+			<img class="main__advantages__item-img" src="assets/advantages/gear.svg" alt="advantage-image">		
+			<div class="main__advantages__item-title">Качество</div>			
+		</div>
+		<div class="main__advantages__item">		
+			<img class="main__advantages__item-img" src="assets/advantages/lock.svg" alt="advantage-image">		
+			<div class="main__advantages__item-title">Гарантия</div>			
+		</div>					
+	</div>
+	<!--   Слоган--> 
+	<div class="main__slogan">
+		<h2 class="main__slogan-text">Мы создаем качественный продукт по доступной цене.<br> Наша задача подарить вам комфорт и домашнийи уют.</h2>
+	</div>
+
+
+
+</div>
+
+
+
+
+
+
+<!-- UIkit JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.20/js/uikit.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.20/js/uikit-icons.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
