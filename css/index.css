@@ -4,8 +4,10 @@ body {
   margin: 0;
   background: #ABABAB;
   --mainColor: #0653B7;
-  --green: #0A72D6; 
+  --secondColor: #0A72D6; 
 }
+
+
 .header {
   display: flex;
   position: fixed;
@@ -21,10 +23,14 @@ body {
 } 
 .header--slide {
   background: rgba(6, 83, 183, .95);
+  height: 105px;
+}
+.header--slide .header__logo-img {
+  width: 125px; 
 }
 .header__layer{  
   position: absolute;
-  width: 860px;
+  max-width: 860px;
   height: 136px; 
   left: 0;
   right: 0;
@@ -54,10 +60,19 @@ body {
 .header__info__item {
   display: flex;
   align-items: center;
+  position: relative;
 }
-.header__info__item:hover {
-  border-bottom: 1px solid #fff;
+ .header__info__item:not(:nth-child(2))::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  left: 0;
+  bottom: 0;
+  
 }
+
 .header__info-title {
   font-weight: bold;
   font-size: 28px;
@@ -83,7 +98,7 @@ body {
   font-size: 46px !important;  
 }
 .material-icons--nav:hover {
-  color: var(--green);
+  color: #BDBDBD;
 }
 
 
@@ -138,7 +153,7 @@ body {
 box-shadow: 0px 5px 11px 7px rgba(105,101,105,0.95);
 }
 .main__slider {
-  height: calc(100vh - 145px);
+  height: calc(100vh - 140px);
   margin-top: 135px; 
 }
 .main__slider-h1 {
@@ -241,28 +256,99 @@ box-shadow: 0px 5px 11px 7px rgba(105,101,105,0.95);
 }
 
 .works {
+  position: relative;
   margin-top: 1rem;
   text-align: center;
+  overflow: hidden;
 }
+.crane {
+  position: absolute;
+  width: 63%;
+  object-fit: contain;
+  right: -21%;
+  top: -1%;
+  z-index: 3;
+}
+.works .uk-card {  
+  font-size: 12px; 
+  padding: 1.5rem; 
+}
+
+
+
+.services {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.services:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.services__item {
+  width: 50%;    
+} 
+.services__item img{
+  object-fit: cover;
+  height: 350px;
+}
+.services .services__item ul{
+  padding: 0 1rem;
+}
+
+
+
+.main__materials {
+  position: relative;
+  max-width: 85%;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+.main__materials li {
+  display: flex;
+  align-items: center;
+}
+.main__materials::after {
+  content: '';
+  position: absolute;
+  margin: auto;
+  width: 70%;
+  height: 1px;
+  background: var(--mainColor);
+  left: 0;
+  right: 0;
+  bottom: 1.5rem;
+}
+
+
+
+
+
+
+
+
+
 
 
 
 @media screen and (max-width: 800px) {
   .header__nav {
     display: none; 
-  }
+  }  
   .header__nav--active {    
     display: flex;
     position: absolute;
     z-index: 6;
-    top: 135px;
+    top: 121px;
     left: 0;
     width: 100%;
-    margin: 0;
-    opacity: .8;
-    justify-content: center;
-    background: var(--green); 
+    margin: 0; 
+    justify-content: center;    
+    background: rgba(10, 114, 214, .85);; 
     height: 135px;
+  }
+  .header--slide .header__logo-img {
+     width: 70px; 
   }
   .header__nav--active .header__nav__items {
     flex-direction: column; 
@@ -274,13 +360,29 @@ box-shadow: 0px 5px 11px 7px rgba(105,101,105,0.95);
     font-size: 1rem;
   }
   .header__info__item {
-    font-size: 16px;
+    font-size: 14px;
   }
   .header__toggler {
     display: flex;
     align-items: center;
     justify-content: flex-end; 
-  } 
+  }
+  .main__slider {
+    height: calc(100vh - 134px);
+    margin-top: 135px;
+  }
+  .works .uk-card {  
+    font-size: 10px;  
+  }
+  [class*=uk-drop-bottom] {
+    margin: auto !important;
+    top: 15% !important;
+    left: 0 !important;
+    right: 0 !important; 
+  }
+
+
+
 }
 
 @media screen and (max-width: 615px) {
@@ -294,7 +396,41 @@ box-shadow: 0px 5px 11px 7px rgba(105,101,105,0.95);
     flex-direction: column;
   }
   .header__logo-img {
-    width: 70px;
+    width: 80px;
+  }
+
+  .main__advantages {
+    justify-content: space-between;    
+  }
+  .main__advantages__item {
+    width: 140px;       
+  }  
+  .main__advantages__item-img {
+    height: 100px; 
+  }
+  .main__advantages__item-title {
+    font-size: 1rem; 
+  }
+  .main__slogan-text {
+    font-size: 10px;
+  }
+  .crane {    
+    width: 60%;    
+    right: -20%;
+    top: 20%;    
+  }
+  .uk-accordion-content p {
+    font-size: 14px;
+  }
+
+
+}
+
+@media screen and (max-width: 380px) {  
+  .crane {   
+    width: 60%;    
+    right: -10%;
+    top: 24%;  
   }
 
 }

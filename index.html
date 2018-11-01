@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">	
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
     <link rel="stylesheet" href="css/index.css">  
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.20/css/uikit.min.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
@@ -11,6 +12,7 @@
 
 </head>
 <body>
+
 	<!--  Шапка--> 
 <div class="header__wrapper"> 
 <div class="header__layer"></div>	
@@ -56,34 +58,34 @@
 	<!--  Слайдер --> 
 	<div uk-slider="center: true; autoplay: true; pause-on-hover: true;" class="main__slider">
 		<div class="uk-position-relative uk-visible-toggle uk-light">
-		    <ul class="uk-slider-items uk-grid-match uk-grid" uk-height-viewport="offset-top: true; offset-bottom: 5">
+		    <ul class="uk-slider-items uk-grid-match uk-grid" uk-height-viewport="offset-top: true; offset-bottom: 6">
 		        <li class="uk-width-1-1">
 		            <div class="uk-cover-container">
-		                <img src="assets/slider/slide1.jpg" alt="" uk-cover>
+		                <img src="assets/slider/slider1.jpeg" alt="" uk-cover>
 		                <div class="uk-position-center uk-panel"><h1 class="main__slider-h1">Строительство домов и коттеджей</h1></div>
 		            </div>
 		        </li>
 		        <li class="uk-width-1-1">
 		            <div class="uk-cover-container">
-		                <img src="assets/slider/slide1.jpg" alt="" uk-cover>
+		                <img src="assets/slider/slider2.jpg" alt="" uk-cover>
 		                <div class="uk-position-center uk-panel"><h1 class="main__slider-h1">Отделка помещений</h1></div>
 		            </div>
 		        </li>
 		        <li class="uk-width-1-1">
 		            <div class="uk-cover-container">
-		                <img src="assets/slider/slide2.jpg" alt="" uk-cover>
+		                <img src="assets/slider/slider3.jpg" alt="" uk-cover>
 		                <div class="uk-position-center uk-panel"><h1 class="main__slider-h1">Водоснабжение</h1></div>
 		            </div>
 		        </li>
 		        <li class="uk-width-1-1">
 		            <div class="uk-cover-container">
-		                <img src="assets/slider/slide1.jpg" alt="" uk-cover>
+		                <img src="assets/slider/slider4.jpg" alt="" uk-cover>
 		                <div class="uk-position-center uk-panel"><h1 class="main__slider-h1">Настройка и установка котельного оборудования</h1></div>
 		            </div>
 		        </li>
 		        <li class="uk-width-1-1">
 		            <div class="uk-cover-container">
-		                <img src="assets/slider/slide1.jpg" alt="" uk-cover>
+		                <img src="assets/slider/slider5.jpg" alt="" uk-cover>
 		                <div class="uk-position-center uk-panel"><h1 class="main__slider-h1">Консультация по проектам</h1></div>
 		            </div>
 		        </li>
@@ -115,8 +117,12 @@
 		</div>
 	</div>
 
-
+	<!--   Блок виды услуг --> 
 	<div class="works">
+		<!--   выдвижной кран--> 
+		<div class="crane" uk-scrollspy="cls: uk-animation-slide-right; repeat: true; delay: 500">
+			<img class="crane-img" src="assets/crane.png" alt="crane"> 
+		</div>
 		<h2>Виды услуг</h2>
 		<div class="uk-child-width-1-1 " uk-grid>	    
 		    <div class="uk-inline uk-light">	    	
@@ -137,7 +143,7 @@
 				</div>
 
 				 <button class="uk-position-absolute uk-transform-center" type="button" style="left: 11%; top: 85%"  uk-marker></button>
-				<div uk-drop>
+				<div uk-drop="pos: top-left">
 					<div class="uk-card uk-card-body uk-card-default">
 					Прокладка всех видов коммуникаций. Водоснабжение, газопровод, канализация, электропитание.
 					</div>
@@ -158,7 +164,7 @@
 				</div>
 
 				<button class="uk-position-absolute uk-transform-center" type="button" style="left: 61%; top: 82%"  uk-marker></button>
-				<div uk-drop>
+				<div uk-drop="pos: top-center">
 					<div class="uk-card uk-card-body uk-card-default">
 					Ландшафтные работы. Включают в себя доставку грунта и его распределение. Оборудование клумб, проклака дорожек, посадка газона.
 					</div>
@@ -174,9 +180,203 @@
 		    </div>
 		</div>
 	</div>
+	<!--   Блок сервисов аккордеон и картинка--> 
+	<div class="services">
+		<div class="services__item">
+			<img src="assets/scania.jpg" alt="">
+		</div>
 
+		<div class="services__item">			
+			<ul uk-accordion>
+			    <li class="uk-open">
+			        <a class="uk-accordion-title" href="#">Доставка</a>
+			        <div class="uk-accordion-content">
+			            <p>Мы занимаемся доставко различных грузов. Среди них: щебень, песок, грунт. Так же производим разгрузку и работы по выравниванию ландшафта.</p>
+			        </div>
+			    </li>
+			    <li>
+			        <a class="uk-accordion-title" href="#">Перевозка</a>
+			        <div class="uk-accordion-content">
+			            <p>Возможна перевозка вашей мебели, грузов, материалов. Включена дальнейшая разгрузка мебели, в том числе и сборка. Детали обговариваются.</p>
+			        </div>
+			    </li>			    
+			</ul>
+		</div>
+	</div>
+	<div class="services">
+		<div class="services__item">
+			<img src="assets/project-image.png" alt="">
+		</div>
 
+		<div class="services__item">			
+			<ul uk-accordion>
+			    <li class="uk-open">
+			        <a class="uk-accordion-title" href="#">Проект</a>
+			        <div class="uk-accordion-content">
+			            <p>Ведем работу по вашему проекту. Можем корректировать изменения по согласованию.</p>
+			        </div>
+			    </li>
+			    <li>
+			        <a class="uk-accordion-title" href="#">Расчеты</a>
+			        <div class="uk-accordion-content">
+			            <p>Произвоим оценку стоимости работ и составляем смету.</p>
+			        </div>
+			    </li>			    
+			</ul>
+		</div>
+	</div>
+	<!--   Блок  применяемых материалов и фирм слайдер--> 
+	<div class="main__materials" >	
+		<div uk-slider>
+		    <div class="uk-position-relative">
+		        <div class="uk-slider-container uk-light">
+		            <ul class="uk-slider-items uk-child-width-1-3 uk-child-width-1-3@s uk-child-width-1-4@m uk-grid">
+		                <li>
+				            <img src="assets/materials/m1.png" alt="materials">
+				            <div class="uk-position-center uk-panel"></div>
+				        </li>
+				          <li>
+				            <img src="assets/materials/m2.png" alt="materials">
+				            <div class="uk-position-center uk-panel"></div>
+				        </li>
+				          <li>
+				            <img src="assets/materials/m3.png" alt="materials">
+				            <div class="uk-position-center uk-panel"></div>
+				        </li>
+				          <li>
+				            <img src="assets/materials/m4.png" alt="materials">
+				            <div class="uk-position-center uk-panel"></div>
+				        </li>
+				          <li>
+				            <img src="assets/materials/m5.png" alt="materials">
+				            <div class="uk-position-center uk-panel"></div>
+				        </li>
+				          <li>
+				            <img src="assets/materials/m6.png" alt="materials">
+				            <div class="uk-position-center uk-panel"></div>
+				        </li>
+				          <li>
+				            <img src="assets/materials/m7.png" alt="materials">
+				            <div class="uk-position-center uk-panel"></div>
+				        </li>
+				          <li>
+				            <img src="assets/materials/m8.png" alt="materials">
+				            <div class="uk-position-center uk-panel"></div>
+				        </li>
+				          <li>
+				            <img src="assets/materials/m9.png" alt="materials">
+				            <div class="uk-position-center uk-panel"></div>
+				        </li>
+				          <li>
+				            <img src="assets/materials/m10.png" alt="materials">
+				            <div class="uk-position-center uk-panel"></div>
+				        </li>
+				            
+		            </ul>
+		        </div>
+
+		        <div class="uk-hidden@s uk-light">
+		            <a class="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+		            <a class="uk-position-center-right uk-position-small" href="#" uk-slidenav-next uk-slider-item="next"></a>
+		        </div>
+		        <div class="uk-visible@s">
+		            <a class="uk-position-center-left-out uk-position-small" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+		            <a class="uk-position-center-right-out uk-position-small" href="#" uk-slidenav-next uk-slider-item="next"></a>
+		        </div>
+		    </div>
+
+		    <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+		</div>
+	</div>
 </div>
+	<!--   Футер -->
+<div class="footer">
+  <div class="footer__container">
+
+     <div class="footer__item">
+         <div class="footer__item-header">
+             <p>О нас</p>
+             
+         </div>
+         <div class="footer__item-body">
+             <p>Мы занимаемся строительством по различным направлениям. Работаем быстро, качественно и надежно. В работе используем передовые материалы и надежную строительную технику.</p>
+         </div>
+         <div class="footer__item-socials">
+              <a href="#"><img src="../assets/social/facebook.png" alt=""></a>
+              <a href="#"><img src="../assets/social/instagram.png" alt=""></a>
+              <a href="#"><img src="../assets/social/google-plus.png" alt=""></a>
+              <a href="#"><img src="../assets/social/linkedin.png" alt=""></a>
+              <a href="#"><img src="../assets/social/twitter.png" alt=""></a>             
+         </div>
+     </div>
+
+
+      <div class="footer__item">
+         <div class="footer__item-header">
+             <p>Меню</p>              
+         </div>
+
+         <div class="footer__item-body">
+            <ul class="footer__links">
+                <li class="footer__links-item"><a href="#"><i class="material-icons material-icons--footer">navigate_next</i>Главная </a></li>
+                <li class="footer__links-item"><a href="projects.html"><i class="material-icons material-icons--footer">navigate_next</i>Проекты</a></li>
+                <li class="footer__links-item"><a href="#"><i class="material-icons material-icons--footer">navigate_next</i>Контакты</a></li>                         
+            </ul>               
+         </div>
+     </div>
+
+
+      <div class="footer__item">
+         <div class="footer__item-header">
+             <p>Адрес</p>              
+         </div>
+
+         <div class="footer__item-body">
+
+             <div class="footer__contacts">
+                <i class="material-icons material-icons--footer">room</i>
+                <p>Sheldon Cooper & Leonard Hofstadter <br>
+                Apt 4B 2311 North Los Robles Avenue <br>
+                4B 2311   Pasadena <br>
+                California 91108
+                USA  </p>
+             </div>
+
+             <div class="footer__contacts">
+                <i class="material-icons material-icons--footer">call</i>
+                <p>8-(456)-343-35-67 бухгалтерия</p>
+             </div>             
+
+         </div>
+    </div>
+
+
+    <div class="footer__item">
+         <div class="footer__item-header">
+             <p>Почта</p>             
+         </div>
+
+         <div class="footer__item-body">
+             <div class="footer__contacts">
+                <i class="material-icons material-icons--footer">alternate_email</i>
+                <p>greenkeeper@bk.combr <br>
+                   naturefond@gmail.com 
+               </p>
+             </div>
+             <div class="footer__contacts">
+                <i class="material-icons material-icons--footer">call</i>
+                <p>8-(456)-343-35-67 Павел<br>
+                   2-(456)-345-33-13 Евгений
+               </p>
+             </div>   
+         </div>
+     </div>
+  
+    
+  </div>
+</div>  
+
+
 
 
 
@@ -190,3 +390,7 @@
 <script src="js/index.js"></script>
 </body>
 </html>
+
+
+
+
